@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		B00C27662F815C5700B5360E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00C274E2F815C5500B5360E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00C27552F815C5500B5360E;
+			remoteInfo = "AnimeRecommendationTinder-Mobile project";
+		};
+		B00C27702F815C5700B5360E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B00C274E2F815C5500B5360E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00C27552F815C5500B5360E;
+			remoteInfo = "AnimeRecommendationTinder-Mobile project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B00C27562F815C5500B5360E /* AnimeRecommendationTinder-Mobile project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnimeRecommendationTinder-Mobile project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00C27652F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnimeRecommendationTinder-Mobile projectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00C276F2F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnimeRecommendationTinder-Mobile projectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B00C27582F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AnimeRecommendationTinder-Mobile project";
+			sourceTree = "<group>";
+		};
+		B00C27682F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AnimeRecommendationTinder-Mobile projectTests";
+			sourceTree = "<group>";
+		};
+		B00C27722F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AnimeRecommendationTinder-Mobile projectUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B00C27532F815C5500B5360E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00C27622F815C5700B5360E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00C276C2F815C5700B5360E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B00C274D2F815C5500B5360E = {
+			isa = PBXGroup;
+			children = (
+				B00C27582F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */,
+				B00C27682F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests */,
+				B00C27722F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests */,
+				B00C27572F815C5500B5360E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B00C27572F815C5500B5360E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B00C27562F815C5500B5360E /* AnimeRecommendationTinder-Mobile project.app */,
+				B00C27652F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests.xctest */,
+				B00C276F2F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B00C27552F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00C27792F815C5700B5360E /* Build configuration list for PBXNativeTarget "AnimeRecommendationTinder-Mobile project" */;
+			buildPhases = (
+				B00C27522F815C5500B5360E /* Sources */,
+				B00C27532F815C5500B5360E /* Frameworks */,
+				B00C27542F815C5500B5360E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B00C27582F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */,
+			);
+			name = "AnimeRecommendationTinder-Mobile project";
+			packageProductDependencies = (
+			);
+			productName = "AnimeRecommendationTinder-Mobile project";
+			productReference = B00C27562F815C5500B5360E /* AnimeRecommendationTinder-Mobile project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B00C27642F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00C277C2F815C5700B5360E /* Build configuration list for PBXNativeTarget "AnimeRecommendationTinder-Mobile projectTests" */;
+			buildPhases = (
+				B00C27612F815C5700B5360E /* Sources */,
+				B00C27622F815C5700B5360E /* Frameworks */,
+				B00C27632F815C5700B5360E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B00C27672F815C5700B5360E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B00C27682F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests */,
+			);
+			name = "AnimeRecommendationTinder-Mobile projectTests";
+			packageProductDependencies = (
+			);
+			productName = "AnimeRecommendationTinder-Mobile projectTests";
+			productReference = B00C27652F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B00C276E2F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B00C277F2F815C5700B5360E /* Build configuration list for PBXNativeTarget "AnimeRecommendationTinder-Mobile projectUITests" */;
+			buildPhases = (
+				B00C276B2F815C5700B5360E /* Sources */,
+				B00C276C2F815C5700B5360E /* Frameworks */,
+				B00C276D2F815C5700B5360E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B00C27712F815C5700B5360E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B00C27722F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests */,
+			);
+			name = "AnimeRecommendationTinder-Mobile projectUITests";
+			packageProductDependencies = (
+			);
+			productName = "AnimeRecommendationTinder-Mobile projectUITests";
+			productReference = B00C276F2F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B00C274E2F815C5500B5360E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					B00C27552F815C5500B5360E = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					B00C27642F815C5700B5360E = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = B00C27552F815C5500B5360E;
+					};
+					B00C276E2F815C5700B5360E = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = B00C27552F815C5500B5360E;
+					};
+				};
+			};
+			buildConfigurationList = B00C27512F815C5500B5360E /* Build configuration list for PBXProject "AnimeRecommendationTinder-Mobile project" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B00C274D2F815C5500B5360E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B00C27572F815C5500B5360E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B00C27552F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */,
+				B00C27642F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectTests */,
+				B00C276E2F815C5700B5360E /* AnimeRecommendationTinder-Mobile projectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B00C27542F815C5500B5360E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00C27632F815C5700B5360E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00C276D2F815C5700B5360E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B00C27522F815C5500B5360E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00C27612F815C5700B5360E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B00C276B2F815C5700B5360E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B00C27672F815C5700B5360E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B00C27552F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */;
+			targetProxy = B00C27662F815C5700B5360E /* PBXContainerItemProxy */;
+		};
+		B00C27712F815C5700B5360E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B00C27552F815C5500B5360E /* AnimeRecommendationTinder-Mobile project */;
+			targetProxy = B00C27702F815C5700B5360E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B00C27772F815C5700B5360E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B00C27782F815C5700B5360E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B00C277A2F815C5700B5360E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Earle-Rose.AnimeRecommendationTinder-Mobile-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B00C277B2F815C5700B5360E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Earle-Rose.AnimeRecommendationTinder-Mobile-project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B00C277D2F815C5700B5360E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Earle-Rose.AnimeRecommendationTinder-Mobile-projectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimeRecommendationTinder-Mobile project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnimeRecommendationTinder-Mobile project";
+			};
+			name = Debug;
+		};
+		B00C277E2F815C5700B5360E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Earle-Rose.AnimeRecommendationTinder-Mobile-projectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimeRecommendationTinder-Mobile project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnimeRecommendationTinder-Mobile project";
+			};
+			name = Release;
+		};
+		B00C27802F815C5700B5360E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Earle-Rose.AnimeRecommendationTinder-Mobile-projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AnimeRecommendationTinder-Mobile project";
+			};
+			name = Debug;
+		};
+		B00C27812F815C5700B5360E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Earle-Rose.AnimeRecommendationTinder-Mobile-projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "AnimeRecommendationTinder-Mobile project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B00C27512F815C5500B5360E /* Build configuration list for PBXProject "AnimeRecommendationTinder-Mobile project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00C27772F815C5700B5360E /* Debug */,
+				B00C27782F815C5700B5360E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00C27792F815C5700B5360E /* Build configuration list for PBXNativeTarget "AnimeRecommendationTinder-Mobile project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00C277A2F815C5700B5360E /* Debug */,
+				B00C277B2F815C5700B5360E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00C277C2F815C5700B5360E /* Build configuration list for PBXNativeTarget "AnimeRecommendationTinder-Mobile projectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00C277D2F815C5700B5360E /* Debug */,
+				B00C277E2F815C5700B5360E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B00C277F2F815C5700B5360E /* Build configuration list for PBXNativeTarget "AnimeRecommendationTinder-Mobile projectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B00C27802F815C5700B5360E /* Debug */,
+				B00C27812F815C5700B5360E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B00C274E2F815C5500B5360E /* Project object */;
+}
