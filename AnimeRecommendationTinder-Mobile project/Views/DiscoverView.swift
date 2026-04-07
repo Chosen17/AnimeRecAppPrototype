@@ -111,7 +111,7 @@ struct DiscoverView: View {
                     }
                     // Small delay so the animation plays before removing the card
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        viewModel.likeTopCard()
+                        viewModel.LikeTopCard()
                     }
                 } else if width < -swipeThreshold {
                     // Swiped far enough to the left — skip it
@@ -159,7 +159,7 @@ struct DiscoverView: View {
                     viewModel.dragOffset = CGSize(width: 600, height: 0)
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    viewModel.likeTopCard()
+                    viewModel.LikeTopCard()
                 }
             }) {
                 Image(systemName: "heart.fill")
