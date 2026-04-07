@@ -1,61 +1,74 @@
 //
-//  ContentView.swift
-//  AnimeRecommendationTinder-Mobile project
+// ContentView.swift
+// AnimeRecommendationTinder-Mobile project
 //
-//  Created by EJ Rose on 04/04/2026.
+// The root view of the entire app.
+//
+// On first launch: shows QuestionnaireView (onboarding).
+// After questionnaire is complete: shows the main TabView.
+//
+// Uses UserPreferencesStorage to check whether the user
+// has already completed the questionnaire, so returning
+// users go straight to the main app without seeing it again.
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+
+    // MARK: - State
+
+    /// Tracks whether the questionnaire has been completed.
+    /// Starts by reading from UserDefaults — false on first launch,
+    /// true for returning users who already set their preferences.
+    @State private var hasCompletedQuestionnaire: Bool =
+        UserPreferencesStorage.shared.hasCompletedQuestionnaire
+
+    // MARK: - Body
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        if hasCompletedQuestionnaire {
+            // Returning user — show main app directly
+            mainTabView
+        } else {
+            // New user — show onboarding questionnaire
+            QuestionnaireView {
+                // This closure is called when the user taps Finish
+                // Switches the UI to the main TabView
+                hasCompletedQuestionnaire = true
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
         }
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
+    // MARK: - Main Tab View
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+    /// The four-tab main interface shown after onboarding is complete.
+    private var mainTabView: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+            // place holder for the discover tab
+            Text("Discover coming soon")
+                .tabItem {
+                    Label("Discover", systemImage: "rectangle.stack.fill")
+                }
+
+            Text("Saved coming soon")
+                .tabItem {
+                    Label("Saved", systemImage: "bookmark.fill")
+                }
+
+            Text("Settings coming soon")
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }
         }
+        .tint(.purple)
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
