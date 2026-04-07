@@ -21,6 +21,8 @@
 
 import Foundation
 import Combine
+import SwiftUI
+
 
 @MainActor
 class DiscoverViewModel: ObservableObject{
@@ -52,11 +54,20 @@ class DiscoverViewModel: ObservableObject{
     /// This here will dictate if the safe content filetr is currently on restricting what conte users can see
     /// to ensure it is acurate have to make sure it actually reads from the UserDefaults and what is in setting so e.g if it is on matches the content that is displayed.
     
-    @AppStorage("safe_content_enabled") private var safeContentEnabled:
+    @AppStorage("safe_content_enabled")private var safeContentEnabled: Bool = true
     
     /// Ratings are considered safe when filter is on
     /// and these match the rating scheme which is returned from Jikan
     private let safeRatings: Set<String> = ["G - All Ages", "PG - Children", "PG-13 - Teens 13 or older"]
+    
+    
+    /// This removes the top card from the stack and reset the drag offset
+    private func removeTopCard(){
+        guard !cardStack.isEmpty else { return }
+        cardStack.removeLast()
+        dragOffset = .zero
+        
+    }
     
     //Pointer - Public Functions
     
@@ -71,22 +82,22 @@ class DiscoverViewModel: ObservableObject{
         
         let preferredGenreIDs = UserPreferencesStorage.shared.loadPreferredGenreIDs()
         
-        do{
+        do {
             var results: [AnimeItem] = []
             
             if preferredGenreIDs.isEmpty{
                 // This here is if again no preference has been saved via the questionnaire so the user didn't complete it out of choice for example.
                 results = try await jikanService.fetchTopAnime()
-                
-            } else{
+            } else {
                 //the anime for each preferred group will be fetched
                 //TaskGroup will be used so all genre requests can run at the same time/parallel to each other
                 // so then they dont have to wait for each other to finish before a new request starts.
-                try await withThrowingTaskGroup(of: [AnimeItem].self){
-                    group in for genreID in preferredGenreIDs.prefix(3) {
+                try await withThrowingTaskGroup(of: [AnimeItem].self){group in for genreID in preferredGenreIDs.prefix(3) {
                         group.addTask{
                             try await self.jikanService.fetchAnimeByGenre(genreID: genreID)
                         }
+                        
+                    }
                         
                         for try await genreResults in group{
                             results.append(contentsOf: genreResults)
@@ -102,54 +113,48 @@ class DiscoverViewModel: ObservableObject{
                 // applying the safe filter is it has been enabled by the user
                 
                 let filtered = safeContentEnabled
-                ? unique.filter {item in guard let rating = item.rating else { return true } return safeRatings.contains(rating)}
+                ? unique.filter {item in guard let rating = item.rating else { return true }; return safeRatings.contains(rating)}
                 : unique
                 
                 // we also have to remove any anime from the popped up recommendation that the user has already saved (This is now) or at least let them now that the have already saved it (this will be later developement or EBI
                 
                 let savedIDs = Set(SavedAnimeStorage.shared.loadAll().map { $0.id})
                 let unsaved = filtered.filter { !savedIDs.contains($0.id)}
-                    
-                    // applying a shuffing functionality for variety and then load those into the card stack
-                    // this will also be reversed so that the index 0 will be at the bottom and whatever the last index is will be at the top (so ascending order basically)
-                    
-                    cardStack = unsaved.shuffled()
-                    
-                    
-                } catch {
-                    errorMessage = error.localizedDescription
-                }
-                                   isLoading = false
-                                   
-                                   
-                                   
-                                   
-            }
-            /// Called when the user swipes right or taps the like button.
-            /// Saves the top card to the watchlist and removes it from the stack.
-            
-            func LikeTopCard(){
-                guard let top = cardStack.last else { return }
-                SavedAnimeStorage.shared.save(anime: top)
-                removeTopCard()
                 
-            }
-            
-            /// Called when the user swipes left or taps the skips button.
-            ///  Simply removes the top card without saving it.
-            func skipTopCard(){
-                removeTopCard()
-            }
-            /// This removes the top card from the stack and reset the drag offset
-            private func removeTopCard(){
-                guard !cardStack.isEmpty else { return }
-                cardStack.removeLast()
-                dragOffset = .zero
+                // applying a shuffing functionality for variety and then load those into the card stack
+                // this will also be reversed so that the index 0 will be at the bottom and whatever the last index is will be at the top (so ascending order basically)
                 
+                cardStack = unsaved.shuffled()
+                
+                
+            }catch{
+                errorMessage = error.localizedDescription
             }
+            isLoading = false
+            
+            
+            
+            
+        }
+        /// Called when the user swipes right or taps the like button.
+        /// Saves the top card to the watchlist and removes it from the stack.
+        
+        func LikeTopCard(){
+            guard let top = cardStack.last else { return }
+            SavedAnimeStorage.shared.save(anime: top)
+            removeTopCard()
+            
         }
         
-        
-        
+        /// Called when the user swipes left or taps the skips button.
+        ///  Simply removes the top card without saving it.
+        func skipTopCard(){
+            removeTopCard()
+        }
         
     }
+    
+    
+    
+    
+
