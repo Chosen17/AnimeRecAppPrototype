@@ -49,8 +49,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-            // place holder for the discover tab
-            Text("Discover coming soon")
+            
+            // placed holder has now been replace with actual functionality
+            DiscoverView()
                 .tabItem {
                     Label("Discover", systemImage: "rectangle.stack.fill")
                 }
