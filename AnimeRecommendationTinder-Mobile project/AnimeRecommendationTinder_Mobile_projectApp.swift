@@ -1,32 +1,24 @@
 //
-//  AnimeRecommendationTinder_Mobile_projectApp.swift
-//  AnimeRecommendationTinder-Mobile project
+// AnimeRecommendationTinder_Mobile_projectApp.swift
+// AnimeRecommendationTinder-Mobile project
 //
-//  Created by EJ Rose on 04/04/2026.
+// The entry point of the entire app.
+// @main tells Swift this is where the app starts.
+// WindowGroup displays ContentView as the root screen.
+// No SwiftData or external dependencies needed here —
+// all data handling is done through our Services and Storage layers.
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct AnimeRecommendationTinder_Mobile_projectApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
+            // ContentView is the root of our app.
+            // It will eventually hold our TabView and
+            // all navigation for the whole app.
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
     }
 }
