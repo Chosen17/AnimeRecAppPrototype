@@ -55,13 +55,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Discover", systemImage: "rectangle.stack.fill")
                 }
-
-            Text("Saved coming soon")
+            // replacing placeholder for functionality
+            SavedView()
                 .tabItem {
                     Label("Saved", systemImage: "bookmark.fill")
                 }
 
-            Text("Settings coming soon")
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
