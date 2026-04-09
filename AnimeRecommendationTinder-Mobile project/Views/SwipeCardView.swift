@@ -58,7 +58,7 @@ struct SwipeCardView: View{
                 
                 HStack(spacing: 12){
                     if let score = anime.score{
-                        Label("\(String(format: "$.1f", score))", systemImage: "star.fill")
+                        Label((String(format: "$.1f", score)), systemImage: "star.fill")
                             .font(.subheadline)
                             .foregroundStyle(.yellow)
                     }
