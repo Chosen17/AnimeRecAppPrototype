@@ -183,4 +183,4 @@ struct SettingsView: View {
                 .multilineTextAlignment(.trailing)
         }
     }
-}
+
