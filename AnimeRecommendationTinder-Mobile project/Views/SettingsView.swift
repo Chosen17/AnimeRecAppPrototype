@@ -129,6 +129,18 @@ struct SettingsView: View {
             } message: {
                 Text("This will clear your saved genre preferences and show the setup questionnaire again on your next launch.")
             }
+            
+            // adding comfirmation so users know that their preferences have been reset
+            .alert("Preference Reset", isPresented: $viewModel.didResetPreferences){
+                Button("Ok"){
+                    hasCompletedQuestionnaire = false
+                }
+            } message:{
+                    Text("Your genre preferences have been cleared. The setup questionnaired will appear when you restart the app.")
+                }
+            }
+            
+            
             // When reset is confirmed, update AppStorage so
             // ContentView shows the questionnaire on next launch
             .onChange(of: viewModel.didResetPreferences) { _, didReset in
