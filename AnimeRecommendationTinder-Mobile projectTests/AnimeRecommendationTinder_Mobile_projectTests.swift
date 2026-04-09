@@ -15,3 +15,4 @@ struct AnimeRecommendationTinder_Mobile_projectTests {
     }
 
 }
+
