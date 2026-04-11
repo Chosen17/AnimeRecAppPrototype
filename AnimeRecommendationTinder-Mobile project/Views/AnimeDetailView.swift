@@ -196,7 +196,7 @@ struct AnimeDetailView: View {
 
             // Year
             if let year = detail.year {
-                Label("\(year)", systemImage: "calendar")
+                Label(String(year), systemImage: "calendar") // had to change the formatting so that the year will appear as "2023" and not "2,023"
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

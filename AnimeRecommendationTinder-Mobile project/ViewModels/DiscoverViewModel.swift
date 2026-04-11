@@ -66,7 +66,23 @@ class DiscoverViewModel: ObservableObject{
         guard !cardStack.isEmpty else { return }
         cardStack.removeLast()
         dragOffset = .zero
+        // this checks if more cards are needed to be fetched
+        reloadIfNeeded() 
         
+    }
+    
+    /// Automatically reloads recommendations when the stack
+    /// runs low — so the user never hits an empty Discover screen
+    /// unless there is a genuine network failure.
+    /// Called whenever a card is removed from the stack.
+    
+    private func reloadIfNeeded(){
+        // So when only 3 card remains, SILENTLY refresh more in the background so they will never run out
+        if cardStack.count <= 3{
+            Task{
+                await loadRecommendations()
+            }
+        }
     }
     
     //Pointer - Public Functions
