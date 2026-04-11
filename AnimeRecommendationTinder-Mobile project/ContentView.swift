@@ -3,59 +3,55 @@
 // AnimeRecommendationTinder-Mobile project
 //
 // The root view of the entire app.
+// Manages three states:
+//   1. Not logged in — shows LoginView
+//   2. Logged in but questionnaire not done — shows QuestionnaireView
+//   3. Logged in and questionnaire done — shows main TabView
 //
-// On first launch: shows QuestionnaireView (onboarding).
-// After questionnaire is complete: shows the main TabView.
-//
-// Uses UserPreferencesStorage to check whether the user
-// has already completed the questionnaire, so returning
-// users go straight to the main app without seeing it again.
+// This ensures each user's preferences and saved anime
+// are tied to their account and never overlap with other users.
 //
 
 import SwiftUI
 
 struct ContentView: View {
 
-    // MARK: - State
-
-    /// Tracks whether the questionnaire has been completed.
-    /// Starts by reading from UserDefaults — false on first launch,
-    /// true for returning users who already set their preferences.
+    // Pointer - State
+    @State private var isLoggedIn: Bool = APIService.shared.isLoggedIn
     @State private var hasCompletedQuestionnaire: Bool =
         UserPreferencesStorage.shared.hasCompletedQuestionnaire
 
-    // MARK: - Body
-
+    // Pointer - Body
     var body: some View {
-        if hasCompletedQuestionnaire {
-            // Returning user — show main app directly
-            mainTabView
-        } else {
-            // New user — show onboarding questionnaire
+        if !isLoggedIn {
+            // State 1 — show login/signup
+            LoginView {
+                isLoggedIn = true
+            }
+        } else if !hasCompletedQuestionnaire {
+            // State 2 — logged in but needs questionnaire
             QuestionnaireView {
-                // This closure is called when the user taps Finish
-                // Switches the UI to the main TabView
                 hasCompletedQuestionnaire = true
             }
+        } else {
+            // State 3 — fully set up, show main app
+            mainTabView
         }
     }
 
-    // MARK: - Main Tab View
-
-    /// The four-tab main interface shown after onboarding is complete.
+    // Pointer - Main Tab View
     private var mainTabView: some View {
         TabView {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-            
-            // placed holder has now been replace with actual functionality
+
             DiscoverView()
                 .tabItem {
                     Label("Discover", systemImage: "rectangle.stack.fill")
                 }
-            // replacing placeholder for functionality
+
             SavedView()
                 .tabItem {
                     Label("Saved", systemImage: "bookmark.fill")
