@@ -8,8 +8,9 @@
 //   2. Logged in but questionnaire not done — shows QuestionnaireView
 //   3. Logged in and questionnaire done — shows main TabView
 //
-// This ensures each user's preferences and saved anime
-// are tied to their account and never overlap with other users.
+// Uses a NotificationCenter observer so that when the user
+// signs out from Settings, ContentView immediately switches
+// back to the login screen without needing a full app restart.
 //
 
 import SwiftUI
@@ -24,17 +25,16 @@ struct ContentView: View {
     // Pointer - Body
     var body: some View {
         if !isLoggedIn {
-            // State 1 — show login/signup
             LoginView {
-                isLoggedIn = true
+                // Re-read both states fresh from storage after login
+                isLoggedIn = APIService.shared.isLoggedIn
+                hasCompletedQuestionnaire = UserPreferencesStorage.shared.hasCompletedQuestionnaire
             }
         } else if !hasCompletedQuestionnaire {
-            // State 2 — logged in but needs questionnaire
             QuestionnaireView {
                 hasCompletedQuestionnaire = true
             }
         } else {
-            // State 3 — fully set up, show main app
             mainTabView
         }
     }
@@ -46,21 +46,22 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-
             DiscoverView()
                 .tabItem {
                     Label("Discover", systemImage: "rectangle.stack.fill")
                 }
-
             SavedView()
                 .tabItem {
                     Label("Saved", systemImage: "bookmark.fill")
                 }
-
-            SettingsView()
-                .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
-                }
+            SettingsView(onSignOut: {
+                // Clear both states so login screen shows immediately
+                isLoggedIn = false
+                hasCompletedQuestionnaire = false
+            })
+            .tabItem {
+                Label("Settings", systemImage: "gearshape.fill")
+            }
         }
         .tint(.purple)
     }
