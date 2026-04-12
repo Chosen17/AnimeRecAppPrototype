@@ -59,6 +59,10 @@ class SavedAnimeStorage {
 
         current.append(anime)
         persist(current)
+        
+        Task{
+            try? await APIService.shared.saveAnime(anime: anime)
+        }
     }
 
     /// Removes an anime from the watchlist by its MAL ID.
@@ -68,6 +72,11 @@ class SavedAnimeStorage {
         var current = loadAll()
         current.removeAll { $0.id == animeID }
         persist(current)
+        
+        // This syncs removal to the Rails backend
+        Task{
+            try? await APIService.shared.removeAnime(malID: animeID)
+        }
     }
 
     /// Returns true if an anime with the given MAL ID is in the saved list.
