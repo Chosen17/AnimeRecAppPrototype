@@ -38,6 +38,27 @@ class SavedViewModel: ObservableObject {
         isLoading = true
         savedAnime = SavedAnimeStorage.shared.loadAll()
         isLoading = false
+        
+        Task{
+            do{
+                let serverSaved = try await APIService.shared.loadSavedAnimes()
+                // The Server is the source that i strue which then use to update the local storage
+                // to match the backend of the account
+                await MainActor.run{
+                    // So we will only update the display here
+                    // due to full local sync would require converting SavedAnimeResponse back to AnimeItem
+                    // which would need additional Jikan calls for the missing fields
+                    // right now the local list and server list run parallel
+                    print ("Server has \(serverSaved.count) saved anime for this account")
+                    
+                }
+                
+                
+            } catch{
+                // silently fail - local data is still shown
+                print("Could not sync from backend: \(error)")  
+            }
+        }
     }
 
     /// Removes an anime from the saved list by its MAL ID.
