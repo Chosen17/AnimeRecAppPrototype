@@ -82,6 +82,8 @@ class AuthViewModel: ObservableObject {
                 userID: response.userId,
                 username: response.username
             )
+            
+            UserPreferencesStorage.shared.resetPreferences() // this here makes it so that every new account will automatically have reset.refreshed preferences
             isAuthenticated = true
         } catch {
             errorMessage = error.localizedDescription
