@@ -19,7 +19,7 @@ import Foundation
 
 class SavedAnimeStorage {
 
-    // MARK: - Singleton
+    // Pointer - Singleton
 
     /// The single shared instance used throughout the app.
     /// Access via SavedAnimeStorage.shared everywhere.
@@ -28,13 +28,13 @@ class SavedAnimeStorage {
     // Private init prevents anyone creating a second instance
     private init() {}
 
-    // MARK: - Private Properties
+    // Pointer - Private Properties
 
     /// The key used to store and retrieve the saved list in UserDefaults.
     /// Using a constant prevents typos causing silent storage failures.
     private let storageKey = "saved_anime_list"
 
-    // MARK: - Public Functions
+    // Pointer - Public Functions
 
     /// Returns all anime currently in the user's saved list.
     /// Decodes from JSON stored in UserDefaults.
@@ -64,6 +64,15 @@ class SavedAnimeStorage {
             try? await APIService.shared.saveAnime(anime: anime)
         }
     }
+    
+    //This here clears all locally saved anime from UserDefaults
+    // This is called on sign out and before new account creation so
+    // each account will then with a clean local watchlist
+    
+    func clearALL(){
+        UserDefaults.standard.removeObject(forKey: storageKey)
+        
+    }
 
     /// Removes an anime from the watchlist by its MAL ID.
     /// If the anime is not in the list, this does nothing safely.
@@ -86,7 +95,7 @@ class SavedAnimeStorage {
         return loadAll().contains(where: { $0.id == animeID })
     }
 
-    // MARK: - Private Helpers
+    // Pointer - Private Helpers
 
     /// Encodes the anime array to JSON and writes it to UserDefaults.
     /// Called internally after every save or remove operation.

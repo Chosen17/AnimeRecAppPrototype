@@ -101,6 +101,7 @@ struct SettingsView: View {
             Button(action: {
                 APIService.shared.clearAuthData()
                 UserPreferencesStorage.shared.resetPreferences()
+                SavedAnimeStorage.shared.clearALL()
                 onSignOut()
             }) {
                 Label {

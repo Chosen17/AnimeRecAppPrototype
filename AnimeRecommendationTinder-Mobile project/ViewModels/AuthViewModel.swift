@@ -84,6 +84,7 @@ class AuthViewModel: ObservableObject {
             )
             
             UserPreferencesStorage.shared.resetPreferences() // this here makes it so that every new account will automatically have reset.refreshed preferences
+            SavedAnimeStorage.shared.clearALL() // This clears the previous users watchlist
             isAuthenticated = true
         } catch {
             errorMessage = error.localizedDescription
